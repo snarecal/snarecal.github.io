@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dining - Taniti Island Wireframe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wireframe-note">
+        <strong>LOW-FIDELITY WIREFRAME:</strong> Dining Page
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">[TANITI ISLAND LOGO]</div>
+            <nav class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="plan-visit.html">Plan Your Visit</a>
+                <a href="things-to-do.html">Things to Do</a>
+                <a href="accommodations.html">Where to Stay</a>
+                <a href="dining.html" class="active">Dining</a>
+            </nav>
+            <button class="cta-button">BOOK NOW</button>
+            <button class="mobile-menu-toggle">☰</button>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Dining on Taniti</h1>
+            <a href="index.html" class="breadcrumb">← Back to Home</a>
+        </div>
+    </section>
+
+    <section class="filters">
+        <div class="container">
+            <div class="filter-bar">
+                <label>Filter by:</label>
+                <select class="filter-select">
+                    <option>Cuisine Type</option>
+                    <option>Local Cuisine</option>
+                    <option>American</option>
+                    <option>Pan-Asian</option>
+                </select>
+                <select class="filter-select">
+                    <option>Location</option>
+                    <option>Taniti City</option>
+                    <option>Yellow Leaf Bay</option>
+                    <option>Merriton Landing</option>
+                </select>
+                <select class="filter-select">
+                    <option>Price Range</option>
+                    <option>$ - Budget</option>
+                    <option>$$ - Moderate</option>
+                    <option>$$$ - Upscale</option>
+                </select>
+                <label><input type="checkbox"> Open Now</label>
+            </div>
+        </div>
+    </section>
+
+    <section class="cuisine-categories">
+        <div class="container">
+            <h2>Cuisine Types</h2>
+            <div class="cuisine-grid">
+                <div class="cuisine-card">
+                    <div class="placeholder-image">[FOOD IMAGE: Local]</div>
+                    <h3>Local Cuisine</h3>
+                    <p>5 restaurants</p>
+                    <p>Fresh fish & rice specialties</p>
+                    <a href="#local" class="btn-secondary">View Restaurants</a>
+                </div>
+                <div class="cuisine-card">
+                    <div class="placeholder-image">[FOOD IMAGE: American]</div>
+                    <h3>American-Style</h3>
+                    <p>3 restaurants</p>
+                    <p>Familiar favorites</p>
+                    <a href="#american" class="btn-secondary">View Restaurants</a>
+                </div>
+                <div class="cuisine-card">
+                    <div class="placeholder-image">[FOOD IMAGE: Asian]</div>
+                    <h3>Pan-Asian</h3>
+                    <p>2 restaurants</p>
+                    <p>Diverse flavors</p>
+                    <a href="#asian" class="btn-secondary">View Restaurants</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="restaurant-listings" id="local">
+        <div class="container">
+            <h2>All Restaurants</h2>
+            
+            <div class="restaurant-card">
+                <div class="restaurant-image">[IMG]</div>
+                <div class="restaurant-info">
+                    <h3>Blue Wave Seafood Restaurant</h3>
+                    <p><strong>Cuisine:</strong> Local (Fish & Rice)</p>
+                    <p><strong>Location:</strong> Taniti City, Yellow Leaf Bay</p>
+                    <p><strong>Price Range:</strong> $$ • <strong>Hours:</strong> 11am-10pm</p>
+                    <p><strong>Specialties:</strong> Fresh catch daily, traditional preparation</p>
+                    <div class="card-buttons">
+                        <button class="btn-secondary">View Menu</button>
+                        <button class="btn-secondary">Get Directions</button>
+                        <button class="btn-primary">Make Reservation</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="restaurant-card">
+                <div class="restaurant-image">[IMG]</div>
+                <div class="restaurant-info">
+                    <h3>Island Grill & Bar</h3>
+                    <p><strong>Cuisine:</strong> American-Style</p>
+                    <p><strong>Location:</strong> Taniti City</p>
+                    <p><strong>Price Range:</strong> $$ • <strong>Hours:</strong> 12pm-11pm</p>
+                    <p><strong>Specialties:</strong> Burgers, steaks, local craft beer</p>
+                    <div class="card-buttons">
+                        <button class="btn-secondary">View Menu</button>
+                        <button class="btn-secondary">Get Directions</button>
+                        <button class="btn-primary">Make Reservation</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="restaurant-card">
+                <div class="restaurant-image">[IMG]</div>
+                <div class="restaurant-info">
+                    <h3>Taniti Fusion</h3>
+                    <p><strong>Cuisine:</strong> Pan-Asian</p>
+                    <p><strong>Location:</strong> Merriton Landing</p>
+                    <p><strong>Price Range:</strong> $$$ • <strong>Hours:</strong> 5pm-10pm</p>
+                    <p><strong>Specialties:</strong> Sushi, Thai curry, Chinese stir-fry</p>
+                    <div class="card-buttons">
+                        <button class="btn-secondary">View Menu</button>
+                        <button class="btn-secondary">Get Directions</button>
+                        <button class="btn-primary">Make Reservation</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="restaurant-card">
+                <div class="restaurant-image">[IMG]</div>
+                <div class="restaurant-info">
+                    <h3>Sunset Café</h3>
+                    <p><strong>Cuisine:</strong> Local (Fish & Rice)</p>
+                    <p><strong>Location:</strong> Yellow Leaf Bay</p>
+                    <p><strong>Price Range:</strong> $ • <strong>Hours:</strong> 7am-9pm</p>
+                    <p><strong>Specialties:</strong> Breakfast, fresh fish, ocean views</p>
+                    <div class="card-buttons">
+                        <button class="btn-secondary">View Menu</button>
+                        <button class="btn-secondary">Get Directions</button>
+                        <button class="btn-primary">Make Reservation</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="restaurant-card">
+                <div class="restaurant-image">[IMG]</div>
+                <div class="restaurant-info">
+                    <h3>Pizza Palace</h3>
+                    <p><strong>Cuisine:</strong> American-Style (Italian)</p>
+                    <p><strong>Location:</strong> Taniti City</p>
+                    <p><strong>Price Range:</strong> $ • <strong>Hours:</strong> 11am-10pm</p>
+                    <p><strong>Specialties:</strong> Wood-fired pizza, pasta, family-friendly</p>
+                    <div class="card-buttons">
+                        <button class="btn-secondary">View Menu</button>
+                        <button class="btn-secondary">Get Directions</button>
+                        <button class="btn-primary">Make Reservation</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- UX annotation removed -->
+    </section>
+
+    <section class="grocery-info">
+        <div class="container">
+            <div class="help-box">
+                <h3>Self-Catering Options Available</h3>
+                <ul>
+                    <li>2 Supermarkets</li>
+                    <li>2 Smaller Grocery Stores</li>
+                    <li>1 Convenience Store (Open 24/7)</li>
+                </ul>
+                <button class="btn-secondary">View Store Locations</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="plan-visit.html">Plan Your Visit</a></li>
+                        <li><a href="things-to-do.html">Things to Do</a></li>
+                        <li><a href="accommodations.html">Where to Stay</a></li>
+                        <li><a href="dining.html">Dining Options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>About Taniti</h4>
+                    <ul>
+                        <li><a href="plan-visit.html#history">Island History</a></li>
+                        <li><a href="plan-visit.html#safety">Safety Information</a></li>
+                        <li><a href="plan-visit.html#holidays">National Holidays</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact & Hours</h4>
+                    <ul>
+                        <li>Tourism Office: [Phone]</li>
+                        <li>Email: [Email Address]</li>
+                        <li>Emergency: Hospital</li>
+                        <li><a href="#">Questions? Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Taniti Tourism Board</p>
+                <div class="social-icons">[Social Media Icons]</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
