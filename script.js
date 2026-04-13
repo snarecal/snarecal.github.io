@@ -81,23 +81,20 @@ document.addEventListener('DOMContentLoaded', function() {
         
         activityCards.forEach(card => {
             let show = true;
-            
             // Category filter
             if (categoryValue !== 'all' && card.dataset.category !== categoryValue) {
                 show = false;
             }
-            
-            // Checkbox filters (OR logic - show if any checkbox is checked and matches)
-            if (familyChecked || adventureChecked || relaxationChecked) {
-                const matchesFamily = familyChecked && card.dataset.familyFriendly === 'true';
-                const matchesAdventure = adventureChecked && card.dataset.adventure === 'true';
-                const matchesRelaxation = relaxationChecked && card.dataset.relaxation === 'true';
-                
-                if (!matchesFamily && !matchesAdventure && !matchesRelaxation) {
-                    show = false;
-                }
+            // Checkbox filters (AND logic - must match all checked attributes)
+            if (familyChecked && card.dataset.familyFriendly !== 'true') {
+                show = false;
             }
-            
+            if (adventureChecked && card.dataset.adventure !== 'true') {
+                show = false;
+            }
+            if (relaxationChecked && card.dataset.relaxation !== 'true') {
+                show = false;
+            }
             card.style.display = show ? 'block' : 'none';
         });
     }
@@ -130,7 +127,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
         accommodationCards.forEach(card => {
             let show = true;
-            
             // Price filter
             if (priceValue !== 'all') {
                 const price = parseInt(card.dataset.price);
@@ -138,27 +134,23 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (priceValue === '100-200' && (price < 100 || price > 200)) show = false;
                 if (priceValue === '200-plus' && price < 200) show = false;
             }
-            
             // Location filter
             if (locationValue !== 'all' && card.dataset.location !== locationValue) {
                 show = false;
             }
-            
-            // Amenities filter
+            // Amenities filter (AND logic: must match selected amenity if not 'all')
             if (amenitiesValue !== 'all') {
                 const amenities = card.dataset.amenities || '';
-                if (!amenities.includes(amenitiesValue)) {
+                if (!amenities.split(',').map(a => a.trim()).includes(amenitiesValue)) {
                     show = false;
                 }
             }
-            
             // Rating filter
             if (ratingValue !== 'all') {
                 const rating = parseInt(card.dataset.rating);
                 if (ratingValue === '4-plus' && rating < 4) show = false;
                 if (ratingValue === '3-plus' && rating < 3) show = false;
             }
-            
             card.style.display = show ? 'block' : 'none';
         });
     }
