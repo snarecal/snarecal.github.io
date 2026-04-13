@@ -1,3 +1,26 @@
+    // FUNCTIONAL FILTERING FOR DINING PAGE
+    const cuisineFilter = document.getElementById('cuisineFilter');
+    const locationFilter = document.getElementById('locationFilter');
+    const priceFilter = document.getElementById('priceFilter');
+
+    function filterRestaurants() {
+        const restaurantCards = document.querySelectorAll('.restaurant-card');
+        const cuisineValue = cuisineFilter ? cuisineFilter.value : 'all';
+        const locationValue = locationFilter ? locationFilter.value : 'all';
+        const priceValue = priceFilter ? priceFilter.value : 'all';
+
+        restaurantCards.forEach(card => {
+            let show = true;
+            if (cuisineValue !== 'all' && card.dataset.cuisine !== cuisineValue) show = false;
+            if (locationValue !== 'all' && card.dataset.location !== locationValue) show = false;
+            if (priceValue !== 'all' && card.dataset.price !== priceValue) show = false;
+            card.style.display = show ? 'flex' : 'none';
+        });
+    }
+
+    if (cuisineFilter) cuisineFilter.addEventListener('change', filterRestaurants);
+    if (locationFilter) locationFilter.addEventListener('change', filterRestaurants);
+    if (priceFilter) priceFilter.addEventListener('change', filterRestaurants);
 // BASIC INTERACTIVITY FOR LOW-FIDELITY WIREFRAME
 // Demonstrates user flow and interaction patterns
 

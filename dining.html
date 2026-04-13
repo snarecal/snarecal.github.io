@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,86 +13,56 @@
     <header class="header">
         <div class="container">
                 <div class="logo" style="margin: 0 auto; text-align: center; font-size: 2rem; font-weight: bold;">TANITI ISLAND</div>
-                <nav class="nav-menu">
+                <nav class="nav-menu" id="navMenu">
                     <a href="index.html">Home</a>
                     <a href="plan-visit.html">Plan Your Visit</a>
                     <a href="things-to-do.html">Things to Do</a>
                     <a href="accommodations.html">Where to Stay</a>
                     <a href="dining.html" class="active">Dining</a>
                 </nav>
-                <button class="mobile-menu-toggle">☰</button>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">☰</button>
         </div>
     </header>
+
 
     <section class="page-header">
         <div class="container">
             <h1>Dining on Taniti</h1>
             <a href="index.html" class="breadcrumb">← Back to Home</a>
-        </div>
-    </section>
-
-    <section class="filters">
-        <div class="container">
-            <div class="filter-bar">
+            <div class="filter-bar" style="margin-top: 24px; margin-bottom: 0; display: flex; gap: 16px; flex-wrap: wrap; align-items: center;">
                 <label>Filter by:</label>
-                <select class="filter-select">
-                    <option>Cuisine Type</option>
-                    <option>Local Cuisine</option>
-                    <option>American</option>
-                    <option>Pan-Asian</option>
+                <select class="filter-select" id="cuisineFilter">
+                    <option value="all">Cuisine Type</option>
+                    <option value="local">Local Cuisine</option>
+                    <option value="american">American</option>
+                    <option value="asian">Pan-Asian</option>
                 </select>
-                <select class="filter-select">
-                    <option>Location</option>
-                    <option>Taniti City</option>
-                    <option>Yellow Leaf Bay</option>
-                    <option>Merriton Landing</option>
+                <select class="filter-select" id="locationFilter">
+                    <option value="all">Location</option>
+                    <option value="taniti-city">Taniti City</option>
+                    <option value="yellow-leaf-bay">Yellow Leaf Bay</option>
+                    <option value="merriton-landing">Merriton Landing</option>
                 </select>
-                <select class="filter-select">
-                    <option>Price Range</option>
-                    <option>$ - Budget</option>
-                    <option>$$ - Moderate</option>
-                    <option>$$$ - Upscale</option>
+                <select class="filter-select" id="priceFilter">
+                    <option value="all">Price Range</option>
+                    <option value="$">$ - Budget</option>
+                    <option value="$$">$$ - Moderate</option>
+                    <option value="$$$">$$$ - Upscale</option>
                 </select>
-                <label><input type="checkbox"> Open Now</label>
             </div>
         </div>
     </section>
 
-    <section class="cuisine-categories">
-        <div class="container">
-            <h2>Cuisine Types</h2>
-            <div class="cuisine-grid">
-                <div class="cuisine-card">
-                    <img class="cuisine-image" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" alt="Local Cuisine" style="width:100%;height:auto;border-radius:8px;object-fit:cover;">
-                    <h3>Local Cuisine</h3>
-                    <p>5 restaurants</p>
-                    <p>Fresh fish & rice specialties</p>
-                    <a href="#local" class="btn-secondary">View Restaurants</a>
-                </div>
-                <div class="cuisine-card">
-                    <img class="cuisine-image" src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" alt="American Cuisine" style="width:100%;height:auto;border-radius:8px;object-fit:cover;">
-                    <h3>American-Style</h3>
-                    <p>3 restaurants</p>
-                    <p>Familiar favorites</p>
-                    <a href="#american" class="btn-secondary">View Restaurants</a>
-                </div>
-                <div class="cuisine-card">
-                    <img class="cuisine-image" src="https://images.unsplash.com/photo-1504674900247-ec6b0b4783e4?auto=format&fit=crop&w=400&q=80" alt="Pan-Asian Cuisine" style="width:100%;height:auto;border-radius:8px;object-fit:cover;">
-                    <h3>Pan-Asian</h3>
-                    <p>2 restaurants</p>
-                    <p>Diverse flavors</p>
-                    <a href="#asian" class="btn-secondary">View Restaurants</a>
-                </div>
-            </div>
-        </div>
-    </section>
+
+
+
 
     <section class="restaurant-listings" id="local">
         <div class="container">
             <h2>All Restaurants</h2>
             
-            <div class="restaurant-card">
-                <img class="restaurant-image" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" alt="Restaurant" style="width:100%;height:auto;border-radius:8px;object-fit:cover;">
+            <div class="restaurant-card" data-cuisine="local" data-location="taniti-city" data-price="$$">
+                <img class="restaurant-image" src="images/pexels-saveurssecretes-10050659.jpg" alt="Blue Wave Seafood Restaurant" style="width:100%;height:auto;border-radius:8px;object-fit:cover;">
                 <div class="restaurant-info">
                     <h3>Blue Wave Seafood Restaurant</h3>
                     <p><strong>Cuisine:</strong> Local (Fish & Rice)</p>
@@ -106,8 +77,8 @@
                 </div>
             </div>
 
-            <div class="restaurant-card">
-                <div class="restaurant-image">[IMG]</div>
+            <div class="restaurant-card" data-cuisine="american" data-location="taniti-city" data-price="$$">
+                <img class="restaurant-image" src="images/pexels-mohamed9380-36782591.jpg" alt="Island Grill & Bar" style="width:100%;height:auto;border-radius:8px;object-fit:cover;">
                 <div class="restaurant-info">
                     <h3>Island Grill & Bar</h3>
                     <p><strong>Cuisine:</strong> American-Style</p>
@@ -122,8 +93,8 @@
                 </div>
             </div>
 
-            <div class="restaurant-card">
-                <div class="restaurant-image">[IMG]</div>
+            <div class="restaurant-card" data-cuisine="asian" data-location="merriton-landing" data-price="$$$">
+                <img class="restaurant-image" src="images/pexels-quang-nguyen-vinh-222549-6877605.jpg" alt="Taniti Fusion" style="width:100%;height:auto;border-radius:8px;object-fit:cover;">
                 <div class="restaurant-info">
                     <h3>Taniti Fusion</h3>
                     <p><strong>Cuisine:</strong> Pan-Asian</p>
@@ -138,8 +109,8 @@
                 </div>
             </div>
 
-            <div class="restaurant-card">
-                <div class="restaurant-image">[IMG]</div>
+            <div class="restaurant-card" data-cuisine="local" data-location="yellow-leaf-bay" data-price="$">
+                <img class="restaurant-image" src="images/pexels-udatommo-34973486.jpg" alt="Sunset Café" style="width:100%;height:auto;border-radius:8px;object-fit:cover;">
                 <div class="restaurant-info">
                     <h3>Sunset Café</h3>
                     <p><strong>Cuisine:</strong> Local (Fish & Rice)</p>
@@ -154,8 +125,8 @@
                 </div>
             </div>
 
-            <div class="restaurant-card">
-                <div class="restaurant-image">[IMG]</div>
+            <div class="restaurant-card" data-cuisine="american" data-location="taniti-city" data-price="$">
+                <img class="restaurant-image" src="images/pexels-giona-mason-1751396-19260840.jpg" alt="Pizza Palace" style="width:100%;height:auto;border-radius:8px;object-fit:cover;">
                 <div class="restaurant-info">
                     <h3>Pizza Palace</h3>
                     <p><strong>Cuisine:</strong> American-Style (Italian)</p>

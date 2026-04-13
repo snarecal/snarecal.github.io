@@ -1,3 +1,14 @@
+/* DINING RESTAURANT IMAGE SCALING */
+.restaurant-image {
+    width: 100%;
+    max-width: 340px;
+    height: 180px;
+    border-radius: 12px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 12px auto;
+    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.10);
+}
 /* LOW-FIDELITY WIREFRAME STYLES */
 /* Design Priority: UX Principles over Visual Polish */
 
@@ -419,6 +430,21 @@ body {
     background-color: #fff;
     border: 2px solid #ccc;
     padding: 20px;
+}
+
+.activity-icons, .amenities-icons {
+    display: flex;
+    gap: 4px;
+    margin: 8px 0 0 0;
+    align-items: center;
+}
+
+.icon-svg {
+    width: 28px;
+    height: 28px;
+    display: inline-block;
+    background: none;
+}
 }
 
 .activity-details,
