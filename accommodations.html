@@ -7,22 +7,19 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="wireframe-note">
-        <strong>LOW-FIDELITY WIREFRAME:</strong> Where to Stay - Accommodations Page
-    </div>
+
 
     <header class="header">
         <div class="container">
-            <div class="logo">[TANITI ISLAND LOGO]</div>
-            <nav class="nav-menu">
+            <div class="logo" style="margin: 0 auto; text-align: center; font-size: 2rem; font-weight: bold;">TANITI ISLAND</div>
+            <nav class="nav-menu" id="navMenu">
                 <a href="index.html">Home</a>
                 <a href="plan-visit.html">Plan Your Visit</a>
                 <a href="things-to-do.html">Things to Do</a>
                 <a href="accommodations.html" class="active">Where to Stay</a>
                 <a href="dining.html">Dining</a>
             </nav>
-            <button class="cta-button">BOOK NOW</button>
-            <button class="mobile-menu-toggle">☰</button>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">☰</button>
         </div>
     </header>
 
@@ -81,7 +78,7 @@
         <div class="container">
             <div class="featured-card" data-price="250" data-location="yellow-leaf-bay" data-amenities="pool,restaurant,beach-access" data-rating="4" data-type="hotel">
                 <div class="featured-gallery">
-                    <div class="placeholder-image large">[IMAGE GALLERY - 3 photos]</div>
+                    <img class="featured-image large" src="images/pexels-robimsel-34762308.jpg" alt="Four-Star Taniti Bay Resort" style="width:100%;height:auto;border-radius:8px;object-fit:cover;">
                 </div>
                 <div class="featured-details">
                     <h2>Four-Star Taniti Bay Resort</h2>
@@ -103,7 +100,7 @@
             <h2>All Accommodations</h2>
             <div class="cards-grid">
                 <div class="accommodation-card" data-price="120" data-location="merriton-landing" data-amenities="beach-access" data-rating="3" data-type="hotel">
-                    <div class="placeholder-image">[THUMBNAIL IMAGE]</div>
+                    <img class="accommodation-thumb" src="images/pexels-freestockpro-12584266.jpg" alt="Sunset Beach Hotel" style="width:100%;height:auto;border-radius:8px;object-fit:cover;">
                     <h3>Sunset Beach Hotel</h3>
                     <div class="rating">⭐⭐⭐ • Merriton Landing</div>
                     <p class="price">From <strong>$120/night</strong></p>
@@ -114,7 +111,7 @@
                 </div>
 
                 <div class="accommodation-card" data-price="90" data-location="taniti-city" data-amenities="restaurant" data-rating="4" data-type="bb,family">
-                    <div class="placeholder-image">[THUMBNAIL IMAGE]</div>
+                    <img class="accommodation-thumb" src="images/pexels-jonastogo-2907196.jpg" alt="Rainforest B&B" style="width:100%;height:auto;border-radius:8px;object-fit:cover;">
                     <h3>Rainforest B&B</h3>
                     <div class="rating">⭐⭐⭐⭐ • City Center</div>
                     <p class="price">From <strong>$90/night</strong></p>
@@ -125,7 +122,7 @@
                 </div>
 
                 <div class="accommodation-card" data-price="25" data-location="taniti-city" data-amenities="" data-rating="2" data-type="budget">
-                    <div class="placeholder-image">[THUMBNAIL IMAGE]</div>
+                    <img class="accommodation-thumb" src="images/pexels-cottonbro-5599599.jpg" alt="Taniti Hostel" style="width:100%;height:auto;border-radius:8px;object-fit:cover;">
                     <h3>Taniti Hostel</h3>
                     <div class="rating">⭐⭐ • Near Airport</div>
                     <p class="price">From <strong>$25/night</strong></p>
@@ -136,7 +133,7 @@
                 </div>
 
                 <div class="accommodation-card" data-price="140" data-location="yellow-leaf-bay" data-amenities="pool,beach-access" data-rating="3" data-type="hotel">
-                    <div class="placeholder-image">[THUMBNAIL IMAGE]</div>
+                    <img class="accommodation-thumb" src="images/pexels-ian-panelo-33688145.jpg" alt="Palm Tree Inn" style="width:100%;height:auto;border-radius:8px;object-fit:cover;">
                     <h3>Palm Tree Inn</h3>
                     <div class="rating">⭐⭐⭐ • Yellow Leaf Bay</div>
                     <p class="price">From <strong>$140/night</strong></p>
@@ -147,7 +144,7 @@
                 </div>
 
                 <div class="accommodation-card" data-price="200" data-location="taniti-city" data-amenities="pool,restaurant" data-rating="4" data-type="hotel">
-                    <div class="placeholder-image">[THUMBNAIL IMAGE]</div>
+                    <img class="accommodation-thumb" src="images/pexels-asadphoto-29614950.jpg" alt="Island View Resort" style="width:100%;height:auto;border-radius:8px;object-fit:cover;">
                     <h3>Island View Resort</h3>
                     <div class="rating">⭐⭐⭐⭐ • Taniti City</div>
                     <p class="price">From <strong>$200/night</strong></p>
@@ -158,7 +155,7 @@
                 </div>
 
                 <div class="accommodation-card" data-price="110" data-location="merriton-landing" data-amenities="restaurant" data-rating="4" data-type="bb,family">
-                    <div class="placeholder-image">[THUMBNAIL IMAGE]</div>
+                    <img class="accommodation-thumb" src="images/pexels-howard-senton-2148272793-32180900.jpg" alt="Cozy Cottage B&B" style="width:100%;height:auto;border-radius:8px;object-fit:cover;">
                     <h3>Cozy Cottage B&B</h3>
                     <div class="rating">⭐⭐⭐⭐ • Merriton Landing</div>
                     <p class="price">From <strong>$110/night</strong></p>

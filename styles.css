@@ -43,13 +43,15 @@ body {
 }
 
 /* HEADER - Sticky Navigation */
+
 .header {
-    background-color: #e0e0e0;
-    border-bottom: 2px solid #333;
-    padding: 15px 0;
+    background: linear-gradient(90deg, #4fc3f7 0%, #1976d2 100%);
+    border-bottom: 2px solid #1976d2;
+    padding: 18px 0 14px 0;
     position: sticky;
-    top: 42px;
+    top: 0;
     z-index: 999;
+    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
 }
 
 .header .container {
@@ -62,31 +64,46 @@ body {
 
 .logo {
     font-weight: bold;
-    font-size: 18px;
-    border: 2px solid #333;
-    padding: 10px 15px;
-    background-color: #fff;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    color: #1976d2;
+    background: #fff;
+    border-radius: 18px;
+    padding: 12px 32px;
+    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.10);
+    border: none;
+    margin: 0 auto;
+    transition: box-shadow 0.3s;
+}
+.logo:hover {
+    box-shadow: 0 4px 16px rgba(25, 118, 210, 0.18);
 }
 
 .nav-menu {
     display: flex;
-    gap: 20px;
+    gap: 24px;
     flex-wrap: wrap;
+    background: rgba(255,255,255,0.85);
+    border-radius: 12px;
+    padding: 6px 18px;
+    box-shadow: 0 1px 4px rgba(25, 118, 210, 0.07);
 }
 
 .nav-menu a {
-    color: #333;
+    color: #1976d2;
     text-decoration: none;
-    padding: 8px 12px;
-    border: 1px solid #999;
-    background-color: #f5f5f5;
-    transition: background-color 0.3s;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: none;
+    background: transparent;
+    font-weight: 500;
+    transition: background 0.3s, color 0.3s;
 }
 
 .nav-menu a:hover,
 .nav-menu a.active {
-    background-color: #ccc;
-    border-color: #333;
+    background: #e3f2fd;
+    color: #0d47a1;
 }
 
 .cta-button {
